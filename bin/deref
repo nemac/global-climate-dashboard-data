@@ -43,11 +43,13 @@ def deref(node):
             refFile = "tabs/" + child.attrib["id"] + ".xml"
             childTree = ET.parse(refFile)
             childRoot = childTree.getroot()
+            childRoot.attrib["id"] = child.attrib["id"]
             node[i] = deref(childRoot)
         elif child.tag == "graphRef":
             refFile = "graphs/" + child.attrib["id"] + ".xml"
             childTree = ET.parse(refFile)
             childRoot = childTree.getroot()
+            childRoot.attrib["id"] = child.attrib["id"]
             node[i] = deref(childRoot)
         elif child.tag == "dataValuesRef":
             dataValuesCSVFile = "data/" + child.attrib['id']

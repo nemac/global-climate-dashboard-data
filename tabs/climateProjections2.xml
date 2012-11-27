@@ -1,0 +1,29 @@
+<tab>
+    <title>Climate Projections</title>
+    <timeslider />
+    <mugloverrides>
+      <element name="plotarea">
+        <attribute name="marginright" value="35"/>
+      </element>
+      <element name="horizontalaxis">
+        <attribute name="min" value="1990"/>
+        <attribute name="max" value="2100"/>
+        <element name="binding">
+          <attribute name="id" value="Tab3TimeBinding"/>
+        </element>
+        <element name="pan">
+          <attribute name="min" value="1900"/>
+          <attribute name="max" value="2100"/>
+        </element>
+        <element name="zoom">
+          <attribute name="min" value="6M"/>
+        </element>
+      </element>
+      <element name="verticalaxis">
+        <element name="pan">
+          <attribute name="allowed" value="yes"/>
+        </element>
+      </element>
+    </mugloverrides>
+    <graphRef id="cp2"/>
+  </tab>

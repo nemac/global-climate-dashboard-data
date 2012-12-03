@@ -1,7 +1,7 @@
     <graph name="TotalGreenhouseGas">
       <title>Annual Greenhouse Gas Index</title>
       <shorttitle>Heat-Trapping Gases</shorttitle>
-      <description>The total effect of long-lived heat-trapping gases has gone up by 30% since 1990, the year many nations agreed to cut emissions.</description>
+      <description>The total warming effect of long-lived heat-trapping gases has gone up by 30% since 1990, the year many nations agreed to cut emissions.</description>
 
       <oldtitle>Annual Greenhouse Gas Index</oldtitle>
       <help>The effect of heat-trapping gases in the atmosphere has increased by 27.5% since 1990, the 

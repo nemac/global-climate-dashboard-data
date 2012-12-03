@@ -1,7 +1,6 @@
     <graph name="cp">
-      <title>Climate Model Data (CMIP3, 2007)</title>
-      <oldtitle>Climate Model Data (CMIP3, 2007)</oldtitle>
-      <legendtitle>Simulation of Global Temperature</legendtitle>
+      <title>Simulation of Global Temperature</title>
+      <legendtitle>Climate Model Data (CMIP3, 2007)</legendtitle>
       <legendtext>The black line shows the average of many different
 simulations of global temperature in the 20th century compared
 to average from 1971-1999, and the colored lines show projected

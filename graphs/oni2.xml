@@ -1,7 +1,7 @@
     <graph name="oni">
       <title>El Niño / La Niña (Oceanic Niño Index)</title>
       <shorttitle>El Niño / La Niña</shorttitle>
-      <description>Average sea surface temperature in the Eastern Pacific Ocean indicates El Niño, La Niña, or neutral conditions</description>
+      <description>Average sea surface temperature in the Eastern Pacific Ocean indicates El Niño (yellow), La Niña (blue), or neutral (gray) conditions</description>
 
       <oldtitle>El Niño / La Niña Index</oldtitle>
       <help>Departures from average sea surface temperature in the eastern Pacific Ocean indicate the status of the El Niño – 

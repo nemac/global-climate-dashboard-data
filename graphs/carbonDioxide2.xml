@@ -1,7 +1,7 @@
     <graph name="CarbonDioxide">
       <title>Carbon Dioxide (ppm)</title>
       <shorttitle>Carbon Dioxide</shorttitle>
-      <description>The amount of carbon dioxide in the atmosphere has risen by about 40% since the Industrial Revolution.</description>
+      <description>The amount of carbon dioxide in the atmosphere has risen by 25% since 1958, and by about 40% since the Industrial Revolution.</description>
       <oldtitle>Carbon Dioxide (ppm)</oldtitle>
       <help>Atmospheric carbon dioxide has increased by about 40% since 1750.
 	The graph shows the number of CO<span baselineShift="subscript">2</span>&#xA0;&#xA0;molecules

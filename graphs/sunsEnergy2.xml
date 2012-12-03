@@ -32,7 +32,7 @@
 	</labels>
 	  <title anchor="0 5" position="0 0">Year</title>
 	 </horizontalaxis>
-	 <verticalaxis highlightstyle="labels" id="wm2" linewidth="0" max="1380" min="1340" tickmax="0" tickmin="-4" type="number">
+	 <verticalaxis highlightstyle="labels" id="wm2" linewidth="0" min="1350" max="1370" tickmax="0" tickmin="-4" type="number">
 	   <labels densityfactor="0.5" format="%.2f" spacing="50 20 10 5 2 1 0.5 0.10 0.05 0.01"/>
 	   <grid/>
 	   <title anchor="0 -4" angle="90" position="-20 0">Sun's Energy (watts per square meter)</title>

@@ -1,0 +1,73 @@
+<graph id="temperature-oak1" name="Temperature">
+      <title>Global Average Temperature (&#730;C)</title>
+      <shorttitle>Temperature</shorttitle>
+      <description>The temperature near Earth&#8217;s surface is rising: the bars show each year&#8217;s average temperature compared to the 20th century average.</description>
+      <oldtitle>Temperature (&#730;C)</oldtitle>
+      <help>Earth&#8217;s overall temperature has increased by 1.3&#176;F (0.7&#176;C) since 1900. <br /> <br />
+
+		In the graph, average annual surface temperature is shown as the difference from the average for 1901-2000.</help>
+      <link>/news-features/understanding-climate/climate-change-global-temperature</link>
+      <stats>
+        <stat>
+          <title>Increase since 1990</title>
+          <value color="0xf8a792">+0.7 C (+1.5&#730; F)</value>
+        </stat>
+        <stat>
+          <title>Rate of increase per decade</title>
+          <value color="0xf8a792">+0.25&#730;F (0.13&#730; C)</value>
+        </stat>
+      </stats>
+      <mugl>
+<window border="0" margin="0" padding="0" />
+  <legend visible="false" />
+  <plotarea marginbottom="50" marginleft="60" marginright="25" margintop="10" />
+  <horizontalaxis highlightstyle="labels" id="year" linewidth="0" max="2020" min="1870" tickmax="0" tickmin="-4" type="datetime">
+    <labels>
+      <label format="%Y" spacing="200Y 100Y 50Y 20Y 10Y 5Y 2Y 1Y" />
+      <label format="%n %y" spacing="6M 3M 2M 1M" />
+    </labels>
+    <grid />
+    <title anchor="0 5" position="-10 0">Year</title>
+  </horizontalaxis>
+
+  <verticalaxis highlightstyle="labels" id="tempanomaly" linewidth="0" max="1" min="-1" tickmax="0" tickmin="-4" type="number">
+    <labels>
+      <label densityfactor="0.5" format="%1d"  spacing="50 20 10 5 2 1" />
+      <label densityfactor="0.5" format="%.1f" spacing="0.5 0.2 0.1" />
+      <label densityfactor="0.5" format="%.2f" spacing="0.05 0.02 0.01" />
+    </labels>
+    <grid />
+    <title anchor="0 -4" angle="90" position="-20 -22">Global Temperature Anomaly (C) compared to 1901-2000</title>
+	
+	
+  </verticalaxis>
+  <plot>
+    <horizontalaxis ref="year">
+      <variable ref="year" />
+    </horizontalaxis>
+    <verticalaxis ref="tempanomaly">
+      <variable ref="temp" />
+    </verticalaxis>
+		<renderer type="bar">
+			<option min="0" name="fillcolor" value="0xCD6760" />
+			<option max="0" name="fillcolor" value="0x6194C8" />
+			<option name="barwidth" value="1Y" />
+			<option name="baroffset" value="0" />
+			<option name="barbase" value="0" />
+		</renderer>
+    <datatips format="{0}: {1}">
+       <variable format="'%y" />
+       <variable format="%.1f" />
+    </datatips>
+  </plot>
+
+  <data>
+    <variables>
+      <variable column="0" id="year" type="datetime" />
+      <variable column="1" id="temp" />
+    </variables>
+    <values>
+      <dataValuesRef id="climate_change_temperature.csv"/>
+    </values>
+  </data>
+</mugl></graph>

@@ -1,0 +1,91 @@
+<graph id="naoi-oak1" name="naoi">
+      <title>North Atlantic Oscillation Index</title>
+      <shorttitle>North Atlantic Oscillation</shorttitle>
+      <description>Air pressure patterns over the North Atlantic can steer winter weather: negative values are linked to storms in the eastern U.S.</description>
+      <alternate>Air pressure patterns in the North Atlantic influence storm tracks. Negative values are linked with winter storms in the eastern U.S.</alternate>
+
+
+      <oldtitle>North Atlantic Oscillation</oldtitle>
+      <help>Departures from average air pressure over Greenland and the central North Atlantic 
+      Ocean affect weather around the Atlantic by influencing the intensity 
+      and location of the jet stream and the storm tracks that follow it. Negative values 
+      are linked with winter storms in the eastern U.S.</help>
+      <link>/news-features/understanding-climate/climate-variability-north-atlantic-oscillation</link>
+      <stats>
+        <stat>
+          <title>?? ??? ?????</title>
+          <value color="0xf8a792">??</value>
+        </stat>
+        <stat>
+          <title>????? ???? ?? ? ?????</title>
+          <value color="0xf8a792">??</value>
+        </stat>
+      </stats>
+      <mugl>
+	 <window border="0" margin="0" padding="0" />
+	  <ui eventhandler="saui" />
+	  <legend visible="false" />
+	 <plotarea marginbottom="50" marginleft="60" marginright="25" margintop="10" />
+
+	  <horizontalaxis highlightstyle="labels" id="x" linewidth="0" max="201207" min="200601" tickmax="0" tickmin="-4" type="datetime">
+		<labels>
+		  <label format="%Y" spacing="100Y 50Y 20Y 10Y 5Y 2Y 1Y " />
+		  <label format="%n %y" spacing="6M 3M 2M 1M" />
+		</labels>
+		<title anchor="0 5" position="-15 0">Month/Year</title>
+		<grid color="0xeeeeee" />
+	  </horizontalaxis>
+	  <verticalaxis highlightstyle="labels" id="y" linewidth="0" max="3" min="-3" tickmax="0" tickmin="-4">
+		<labels>
+		 <label densityfactor="0.5" format="%1d" spacing="20 10 5 2 1" />
+		 <label densityfactor="0.5" format="%.1f" spacing="0.5 0.2 0.1" />
+		</labels>
+		<title anchor="0 -4" angle="90" position="-15 0">North Atlantic Oscillation Index</title>
+		<zoom max="50" min="0.2" />
+		
+		
+	  </verticalaxis>
+
+	  <plot>
+		<legend visible="false" />
+		<verticalaxis ref="y"><constant value="0" /></verticalaxis>
+		<renderer type="line">
+		  <option name="linecolor" value="0x999999" />
+		  <option name="linewidth" value="1" />
+		</renderer>
+	  </plot>
+
+	  <plot>
+		<legend label="Yearly average" />
+		<horizontalaxis ref="x"><variable ref="datetime" /></horizontalaxis>
+		<verticalaxis ref="y"><variable ref="number" /></verticalaxis>
+			<renderer type="bar">
+
+				
+
+				<option min="0.0" name="fillcolor" value="0xD01E11" />
+				<option max="0.0" name="fillcolor" value="0xCD6760" />
+
+				<option name="linecolor" value="0x000000" />
+				
+				<option name="barwidth" value="1M" />
+				<option name="baroffset" value="0" />
+				<option name="barbase" value="0" />
+			</renderer>
+		<datatips format="{0}: {1}">
+				 <variable format="%n '%y" />
+				<variable format="%.2f" />
+			</datatips>
+	  </plot>
+
+	  <data>
+
+		<variables>
+		  <variable column="0" id="datetime" type="datetime" />
+		  <variable column="1" id="number" type="number" />
+		</variables>
+		<values>
+		  <dataValuesRef id="climate_vari_NAO.csv"/>
+        </values>
+	  </data>
+	</mugl></graph>

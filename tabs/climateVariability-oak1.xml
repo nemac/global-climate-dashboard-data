@@ -1,0 +1,26 @@
+<tab id="climateVariability-oak1">
+    <title>Climate Variability</title>
+    <timeslider />
+    <mugloverrides>
+      <element name="horizontalaxis">
+        <attribute name="min" value="2010" />
+        <attribute name="max" value="2013" />
+        <element name="binding">
+          <attribute name="id" value="Tab2TimeBinding" />
+        </element>
+        <element name="pan">
+          <attribute name="min" value="1950" />
+          <attribute name="max" value="2015" />
+        </element>
+        <element name="zoom">
+          <attribute name="min" value="6M" />
+        </element>
+      </element>
+    </mugloverrides>
+    <graphRef id="oni-oak1"/>
+    <graphRef id="aoi-oak1"/>
+    <graphRef id="naoi-oak1"/>
+    <graphRef id="soi-oak1"/>
+    <graphRef id="pnap-oak1"/>
+    
+</tab>

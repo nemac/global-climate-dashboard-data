@@ -1,0 +1,31 @@
+<tab id="climateChange-oak1">
+    <title>Climate Change</title>
+    <timeslider />
+    <mugloverrides>
+      <element name="horizontalaxis">
+        <attribute name="min" value="1950" />
+        <attribute name="max" value="2015" />
+        <element name="binding">
+          <attribute name="id" value="Tab1TimeBinding" />
+        </element>
+        <element name="pan">
+          <attribute name="min" value="1880" />
+          <attribute name="max" value="2020" />
+        </element>
+        <element name="zoom">
+          <attribute name="min" value="6M" />
+        </element>
+      </element>
+    </mugloverrides>
+
+    <graphRef id="temperature-oak1"/>
+    <graphRef id="carbonDioxide-oak1"/>
+    <graphRef id="snowCover-oak1"/>
+    <graphRef id="seaLevel-oak1"/>
+    <graphRef id="asi-oak1"/>
+    <graphRef id="oceanHeat-oak1"/>
+    <graphRef id="sunsEnergy-oak1"/>
+    <graphRef id="glacier-oak1"/>
+    <graphRef id="totalGreenhouseGas-oak1"/>
+    
+</tab>

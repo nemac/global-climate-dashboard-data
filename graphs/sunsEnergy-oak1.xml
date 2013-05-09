@@ -1,0 +1,74 @@
+<graph id="sunsEnergy-oak1" name="SunsEnergy">
+      <title>Sun's Energy (W/m<sup>2</sup>)</title>
+      <shorttitle>Sun's Energy</shorttitle>
+      <description>The sun&#8217;s energy rises and falls slightly on an 11-year cycle, with little net change over the last century.</description>
+
+      <oldtitle>Sun's Energy (W/m<span baselineShift="superscript">2</span>)</oldtitle>
+      <help>Energy from the Sun varies slightly on 11-year cycles with little net 
+      change overall. <br /> <br />
+
+	The graph shows the total amount of solar energy arriving at the top of Earth&#8217;s 
+	atmosphere.</help>
+      <link>/news-features/understanding-climate/climate-change-incoming-sunlight</link>
+      <stats>
+        <stat>
+          <title>Change since 1880</title>
+          <value color="0xcccccc">0 W/m<span baselineShift="superscript">2</span></value>
+        </stat>
+        <stat>
+          <title>Average change per decade</title>
+          <value color="0xcccccc">0 W/m<span baselineShift="superscript">2</span></value>
+        </stat>
+      </stats>
+      <mugl>
+	 <window border="0" margin="0" padding="0" />
+	  <legend visible="false" />
+	 <plotarea marginbottom="50" marginleft="60" marginright="25" margintop="10" />
+	 <horizontalaxis highlightstyle="labels" id="year" linewidth="0" max="2010" min="1960" tickmax="0" tickmin="-4" type="datetime">
+	  <grid />
+	  <labels>
+		<label format="%Y" spacing="500Y 200Y 100Y 50Y 20Y 10Y 5Y 2Y 1Y" />
+		<label format="%n %y" spacing="6M 3M 2M 1M" />
+	</labels>
+	  <title anchor="0 5" position="0 0">Year</title>
+	 </horizontalaxis>
+	 <verticalaxis highlightstyle="labels" id="wm2" linewidth="0" max="1370" min="1350" tickmax="0" tickmin="-4" type="number">
+       <labels>
+         <label densityfactor="0.5" format="%1d"  spacing="50 20 10 5 2 1" />
+         <label densityfactor="0.5" format="%.1f" spacing="0.5 0.1" />
+         <label densityfactor="0.5" format="%.2f" spacing="0.05 0.01" />
+       </labels>
+	   <grid />
+	   <title anchor="0 -4" angle="90" position="-20 0">Sun's Energy (watts per square meter)</title>
+	   
+	   
+	 </verticalaxis>
+	 
+	  <plot>
+		<horizontalaxis ref="year">
+		  <variable ref="year" />
+		</horizontalaxis>
+		<verticalaxis ref="wm2">
+		  <variable ref="sunsenergy" />
+		</verticalaxis>
+			<renderer type="fill">
+				<option name="linecolor" value="0x90480f" />
+				<option name="linewidth" value="1.0" />
+				<option name="fillcolor" value="0xed7619" />
+				<option name="fillopacity" value="0.1" />
+			</renderer>
+		<datatips format="{0}: {1}">
+		   <variable format="'%y" />
+		   <variable format="%.1f" />
+		</datatips>
+	  </plot>
+	  <data>
+		<variables>
+		  <variable column="0" id="year" type="datetime" />
+		  <variable column="1" id="sunsenergy" />
+		</variables>
+		<values>
+          <dataValuesRef id="climate_change_sun_energy.csv"/>
+        </values>
+	  </data>
+	</mugl></graph>

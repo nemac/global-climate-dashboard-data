@@ -52,13 +52,13 @@
         </element>
       </element>
       <elements name="datatips">
-      	<attribute name="border" value="1"/>
-        <attribute name="bgcolor" value="0x33383b"/>
-        <attribute name="bordercolor" value="0x5b6473"/>
-        <attribute name="fontcolor" value="0xffffff"/>
-        <attribute name="fontsize" value="14"/>
-        <attribute name="bold" value="true"/>
-        <attribute name="pad" value="2"/>
+      	<attribute name="border" value="2" />
+        <attribute name="bgcolor" value="0xffffff" />
+        <attribute name="bordercolor" value="0x000000" />
+        <attribute name="fontcolor" value="0x000000" />
+        <attribute name="fontsize" value="14" />
+        <attribute name="bold" value="true" />
+        <attribute name="pad" value="2" />
       </elements>
     </mugloverrides>
 

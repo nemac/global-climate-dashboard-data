@@ -34,7 +34,7 @@ The graph shows the average area with at least 15% sea ice on its surface each S
 		<title anchor="0 5" position="-10 0">Year</title>
 		<grid color="0xeeeeee"/>
 	  </horizontalaxis>
-	  <verticalaxis highlightstyle="labels" id="y" linewidth="0" min="0" max="8" tickmax="0" tickmin="-4">
+	  <verticalaxis highlightstyle="labels" id="y" linewidth="0" min="0" max="9" tickmax="0" tickmin="-4">
 		<labels>
 		 <label densityfactor="0.5" format="%1d" spacing="20 10 5 2 1"/>
 		 <label densityfactor="0.5" format="%.1f" spacing="0.5 0.2 0.1"/>

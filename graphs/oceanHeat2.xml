@@ -6,7 +6,7 @@
 
       <oldtitle>Ocean Heat (10<span baselineShift="superscript">22</span> Joules)</oldtitle>
       <help>More than 90% of the warming that has occurred on Earth over the past 50 years has occurred in the ocean. The graph shows heat energy in the top 700 meters of the ocean as the difference from the average from 1955-2006.</help>
-      <link>http://www.climatewatch.noaa.gov/article/2011/climate-change-ocean-heat-content</link>
+      <link>/news-features/understanding-climate/climate-change-ocean-heat-content</link>
       <stats>
         <stat>
           <title>Increase since 1955</title>
@@ -32,7 +32,7 @@
     <grid color="0xeeeeee"/>
   </horizontalaxis>
   
-  <verticalaxis highlightstyle="labels" id="y" linewidth="0" min="-8" max="14" tickmax="0" tickmin="-4">
+  <verticalaxis highlightstyle="labels" id="y" linewidth="0" min="-8" max="15" tickmax="0" tickmin="-4">
     <labels>
      <label densityfactor="0.5" format="%1d" spacing="20 10 5 2 1"/>
      <label densityfactor="0.5" format="%.1f" spacing="0.5 0.2 0.1"/>

@@ -4,23 +4,20 @@
 # and <dataValuesRef> tags in the XML files in the "dashboards", "tabs",
 # "graphs", and "data" directory.
 # 
-# Usage:
+# Usage, e.g:
 # 
-#     makeconfig INPUT_FILE
+#     ./bin/deref ./dashboards/dashboard2.xml
 # 
-#         where INPUT_FILE is one of the XML files in the
-#         "dashboards",  "tabs", or "graphs" directory
-#
 # The output, which is written to standard output, is a version
 # of the input file in which all the <tabRef>, <graphRef>
 # and <dataValuesRef> tags have been replaced with the contents
 # of the files they refer to, recursively.
 #
-# This script is intended primarily for using during development and
-# debugging.  It isn't used in production; it's just a handy tool to
-# make it easy to expand *Ref tags while editing the various XML
-# files.
-# 
+# This script looks for files in subdirectories of the current
+# directory (current when the script is run) named `tabs`,
+# `graphs`, and `data`; so it has to be run in a directory that
+# contains those subdirs (and files in them).
+#
 # Mark Phillips
 # Mon Nov 26 23:40:29 2012
 

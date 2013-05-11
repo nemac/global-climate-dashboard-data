@@ -1,27 +1,55 @@
 #! /usr/bin/python
-
-# This script resolves the references indicated by <tabRef>, <graphRef>
-# and <dataValuesRef> tags in the XML files in the "dashboards", "tabs",
-# "graphs", and "data" directory.
-# 
-# Usage, e.g:
-# 
-#     ./bin/deref ./dashboards/dashboard2.xml
-# 
-# The output, which is written to standard output, is a version
-# of the input file in which all the <tabRef>, <graphRef>
-# and <dataValuesRef> tags have been replaced with the contents
-# of the files they refer to, recursively.
 #
-# This script looks for files in subdirectories of the current
-# directory (current when the script is run) named `tabs`,
-# `graphs`, and `data`; so it has to be run in a directory that
-# contains those subdirs (and files in them).
+# usage:
+#
+#    deref [-e ELEMENT] INFILE
+#
+# This script (recursively) resolves the references indicated by
+# <tabRef>, <graphRef> and <dataValuesRef> tags in the input file
+# INFILE.
+#
+# Each of the <tabRef>, <graphRef> <dataValuesRef> tags takes an `id`
+# attribute, whose value indicates a file, and deref replaces the
+# <*ref> tab with the contents of that files.  The files are resolved
+# as follows:
+#
+#
+#     XML input                   Replaced with contents of file
+#     ---------                   ------------------------------
+#     <tabRef id="NAME">          tabs/NAME.xml
+#     <graphRef id="NAME">        graphs/NAME.xml
+#     <dataValuesRef id="NAME">   data/NAME
+#
+# Note that for `tabRef` and `graphRef`, the suffix `.xml` is appended
+# to the value of the `id` attribute in forming the filename, but no
+# suffix is appended for `dataValuesRef`.
+#
+# Also note the the files are expected to be in subdirectories named
+# `tabs`, `graphs`, and `data`; `deref` must be run in a current
+# directory containing these subdirectories.
+#
+# The optional `-e` argument specifies an XML element name to be
+# extracted; if `-e` is specfied, `deref` will print the XML tree
+# rooted at the first occurence of that element in output.  If `-e` is
+# not present, deref will print the entire XML output corresponding to
+# INFILE.
+#
+# EXAMPLES:
+#
+#     Print the contents of dashboards/dashboard2.xml, with all <*ref> tags
+#     replaced by the contents of the files they refer to:
+#
+#         ./bin/deref dashboards/dashboard2.xml
+#
+#     Print the `<mugl>` part of graphs/aoi.xml, with all <*ref> tags
+#     replaced by the contents of the files they refer to:
+#
+#         ./bin/deref -e mugl graphs/aoi.xml
 #
 # Mark Phillips
-# Mon Nov 26 23:40:29 2012
+# Sat May 11 09:20:10 2013
 
-import sys, os
+import sys, os, optparse
 import xml.etree.ElementTree as ET
 
 def file_contents(file):
@@ -56,8 +84,18 @@ def deref(node):
             node[i] = deref(child)
     return node
 
+def usage():
+    print "usage: deref [-e TARGET_ELEMENT] INFILE"
+    sys.exit(-1)
 
-infile = sys.argv[1]
+parser = optparse.OptionParser()
+parser.add_option('-e', help='optional element name', dest='element', type="string")
+(opts, args) = parser.parse_args()
+
+if len(args) <= 0:
+    usage()
+
+infile = args[0]
 
 if not os.path.exists(infile):
     print "File %s not found." % infile
@@ -66,4 +104,7 @@ if not os.path.exists(infile):
 tree = ET.parse(infile)
 root = tree.getroot()
 
-print ET.tostring(deref(root))    
+if opts.element is not None:
+    print ET.tostring(deref(root.find(opts.element)))    
+else:
+    print ET.tostring(deref(root))    

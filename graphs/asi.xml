@@ -12,7 +12,7 @@ The graph shows the average area with at least 15% sea ice on its surface each S
 	  <legend visible="false" />
 	 <plotarea marginbottom="50" marginleft="60" marginright="25" margintop="10" />
 
-	  <horizontalaxis highlightstyle="labels" id="x" linewidth="0" max="2010" min="1979" tickmax="0" tickmin="-4" type="datetime">
+	  <horizontalaxis highlightstyle="labels" id="x" linewidth="0" max="2014" min="1979" tickmax="0" tickmin="-4" type="datetime">
 		<labels>
 		  <label format="%Y" spacing="100Y 50Y 20Y 10Y 5Y 2Y 1Y" />
 		  <label format="%n %y" spacing="6M 3M 2M 1M" />

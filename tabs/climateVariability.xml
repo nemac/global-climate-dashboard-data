@@ -4,7 +4,7 @@
     <mugloverrides>
       <element name="horizontalaxis">
         <attribute name="min" value="2010" />
-        <attribute name="max" value="2013" />
+        <attribute name="max" value="2014" />
         <element name="binding">
           <attribute name="id" value="Tab2TimeBinding" />
         </element>
